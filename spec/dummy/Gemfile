@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+source 'http://gems.artemisdev.net'
+
+gem 'quiver', path: '../../', require: 'quiver'
+
+gem 'activerecord'
+gem 'sqlite3'

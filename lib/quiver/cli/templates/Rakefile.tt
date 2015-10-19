@@ -1,0 +1,12 @@
+require 'rake'
+begin
+  require 'rspec/core/rake_task'
+rescue LoadError
+  # Do nothing
+end
+
+require_relative './lib/<%= underscored_name %>'
+<%= camelized_name %>::Tasks.load_tasks
+
+task :environment do
+end

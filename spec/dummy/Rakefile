@@ -1,0 +1,13 @@
+require 'rake'
+begin
+  require 'rspec/core/rake_task'
+rescue LoadError
+  # Do nothing
+end
+
+require_relative './lib/pwny'
+Pwny::Tasks.load_tasks
+
+task :environment do
+  # Todo: Environmenty things
+end

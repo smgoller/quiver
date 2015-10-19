@@ -1,0 +1,21 @@
+development: &development
+  adapter: sqlite3
+  database: ':memory:'
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *development
+# At a bare minimum, ActiveRecord requires a database name for Postgres. All
+# other config can be set using LibPQ's environment vars.
+#
+# http://www.postgresql.org/docs/9.1/static/libpq-envars.html
+staging:
+  <<: *development
+
+production:
+  <<: *development
+
+acceptance:
+  <<: *development

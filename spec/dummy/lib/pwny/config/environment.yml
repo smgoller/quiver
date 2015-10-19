@@ -1,0 +1,10 @@
+I_AM_ENV_VAR: "hear me roar!"
+I_AM_ENV_VAR_TOO: "woopty do"
+I_AM_THIRD: "doodles doodles doodles"
+
+development:
+  I_AM_ENV_VAR_TOO: "but more development specific"
+  I_AM_THIRD: "developmenty doodles doodles doodles"
+
+test:
+  I_AM_THIRD: "testy doodles doodles doodles"

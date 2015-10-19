@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'quiver/version'
+require 'pry'
+require 'active_support/all'
+require 'quiver/cli/app'
+
+Quiver::CLI::App.start

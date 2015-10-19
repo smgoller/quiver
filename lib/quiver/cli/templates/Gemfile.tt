@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+
+<%- if options[:active_record] -%>
+gem 'activerecord', '~> 4.2.0'
+gem 'sqlite3'
+<%- end -%>
+
+gemspec

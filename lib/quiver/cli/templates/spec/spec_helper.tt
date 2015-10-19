@@ -1,0 +1,19 @@
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+ENV['RACK_ENV'] = 'test'
+
+require 'rack/test'
+require '<%= underscored_name %>'
+
+Dir[File.join('spec', 'support', '**', '*.rb')].each { |f| require File.expand_path(f) }
+
+RSpec.configure do |config|
+  config.include Rack::Test::Methods
+
+  def app
+    <%= camelized_name %>::Application.new
+  end
+
+  config.before(:each) do
+    <%= camelized_name %>::Application.memory_adapter_store.clean!
+  end
+end

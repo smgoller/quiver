@@ -1,0 +1,21 @@
+development:
+  adapter: sqlite
+  database: <%= underscored_name %>_development
+  min_messages: warning
+  pool: 5
+
+test:
+  adapter: sqlite
+  database: <%= underscored_name %>_test
+  min_messages: warning
+  pool: 5
+
+staging: &staging
+  adapter: sqlite
+  database: <%= underscored_name %>_staging
+  pool: 5
+
+production:
+  adapter: sqlite
+  database: <%= underscored_name %>_production
+  pool: 5
